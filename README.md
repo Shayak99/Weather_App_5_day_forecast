@@ -1,2 +1,2 @@
-# Westher_App_5_day_forecast
+# Weather_App
 Created with CodeSandbox
