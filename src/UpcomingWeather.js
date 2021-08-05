@@ -70,9 +70,9 @@ class UpcomingWeatherCardContainer extends React.Component {
       for (let i = 0; i < fiveDayAPIDataList.length; i++) {
         if (fiveDayAPIDataList[i].dt > currentDate + 93600 * currentDayIndex) {
           // adding data into fiveDayForecast object
-          // fiveDayForecast[currentDayIndex].dayOfWeek = this.getDays(
-          //   fiveDayAPIDataList[i].dt * 1000
-          // );
+          fiveDayForecast[currentDayIndex].dayOfWeek = this.getDays(
+            fiveDayAPIDataList[i].dt * 1000
+          );
 
           currentDayIndex++;
           if (currentDayIndex > 4) break;
@@ -110,9 +110,9 @@ class UpcomingWeatherCardContainer extends React.Component {
     });
   };
 
-  // getDays = (data) => {
-  //   return new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(data);
-  // };
+  getDays = (data) => {
+    return new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(data);
+  };
 
   render = () => {
     return (
